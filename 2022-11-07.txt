@@ -1,0 +1,6 @@
+Database managers:
+. MySQL Workbench
+. Heidi SQL
+. phpMyAdmin
+
+

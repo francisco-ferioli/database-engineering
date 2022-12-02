@@ -1,0 +1,109 @@
+body {
+	background-color: #3399DB;
+	color: #3399DB;
+	display: grid;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	grid-template-columns: repeat(5, 1fr);
+	margin: 0;
+	padding: 0;
+}
+
+header, main, footer {
+	grid-column: 2/5;
+	background-color: #ffffff;
+}
+
+header {
+	border-image: repeating-linear-gradient(90deg, #ffffff, #3399DB, #ffffff 100px) /* source */ 1 / /* slice */ 0px 0px 10px 0px / /* width */ 0px 0px 0px 0px /* outset */ round; /* repeat */
+	position: sticky;
+	top: 1px;
+}
+
+header ul {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+}
+
+@counter-style nature {
+	suffix: "	";
+	symbols: 🐋 🇦🇷 🐴 🍺 ⚽ 👨‍🌾 🎸 🦌 🧉 🐧 🚜 🌾 🐮 🍷 🐆;
+	system: cyclic;
+}
+
+header li {
+	list-style-type: none;
+	padding: 20px 10px 20px 10px;
+}
+
+header li:hover {
+	background-color: #3399DB;
+	border-left: none;
+	color: #ffffff;
+}
+
+div {
+	padding: 30px 30px 30px 30px;
+}
+
+#colored_div {
+	background: #000000;
+	color: #ffffff;
+}
+
+blockquote {
+	background-color: #3399DB;
+	border-left: solid #ffff00 10px;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 20px;
+}
+
+li {
+	list-style: nature;
+	padding: 10px 10px 10px 10px;
+}
+
+li:hover {
+	background-color: #3399DB;
+	border-left: solid #ffff00 10px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+a {
+	color: #3399DB;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ffffff;
+	
+}
+
+form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+label {
+	grid-column: 1;
+}
+
+select {
+	grid-column: 2;
+}
+
+footer {
+	font-weight: bold;
+	text-align: center;
+}
+
+@media screen and (max-width: 375px){
+	header, main, footer {
+		grid-column: 1/6;
+	}
+}

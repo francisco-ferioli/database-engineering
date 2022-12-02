@@ -1,0 +1,6 @@
+Printing multidimensional arrays
+. The outer loop prints the rows.
+. The inner loop prints the data in them.
+. $[variables] as [variable] so each row is a different [$variable]
+
+var_dump displays the most information.
