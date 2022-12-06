@@ -5,7 +5,7 @@
 		<meta name="theme-color" content="#000000">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title></title>
+		<title>Week 2</title>
 		<!-- Cascading Style Sheet -->
 			<link href="css/main.css" media="all" rel="stylesheet" type="text/css">
 		<!-- Favicon-->

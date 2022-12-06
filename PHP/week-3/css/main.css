@@ -1,8 +1,8 @@
+/* Dynamic */
+
 body {
-	background-color: #3399DB;
 	color: #3399DB;
 	display: grid;
-	font-family: Arial, sans-serif;
 	font-weight: bold;
 	grid-template-columns: repeat(5, 1fr);
 	margin: 0;
