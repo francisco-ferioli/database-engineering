@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 	// Source: https://stackoverflow.com/questions/8028957/how-to-fix-headers-already-sent-error-in-php
 
 	// It works, but why do I have to fill the form twice to get set the values?
@@ -20,8 +23,19 @@
 	$fs_value = filter_input(INPUT_POST, "font-size");
 	$fs_expire = strtotime('+10 minutes');
 	setcookie($fs_name, $fs_value, $fs_expire);
+
+	/* read https://www.php.net/manual/en/function.header
+	if(isset($_COOKIE[$bc_name])) {
+		header('Location: index.php');
+	}
+	if(isset($_COOKIE[$ff_name])) {
+		header('Location: index.php');
+	}
+	if(isset($_COOKIE[$fs_name])) {
+		header('Location: index.php');
+	}
 	
-	/* From the book
+	From the book
 	
 	// Set a cookie in the browser
 	$name ='userid';
@@ -40,7 +54,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title></title>
 		<!-- Cascading Style Sheet -->
-			<link href="css/main.css" media="all" rel="stylesheet" type="text/css">
+			<link href="../css/main.css" media="all" rel="stylesheet" type="text/css">
 			<style>
 				body {
 					background-color: <?= filter_input(INPUT_COOKIE, "background-color")?>;
@@ -59,8 +73,9 @@
 			<div>
 				<nav>
 					<ul>
-						<a href="#reservations"><li>RESERVATIONS</li></a>
-						<a href="#settings"><li>SETTINGS</li></a>
+						<a href="../"><li>HOME</li></a>
+						<a href="../reservations"><li>RESERVATIONS</li></a>
+						<a href="../settings"><li>SETTINGS</li></a>
 					</ul>
 				</nav>
 			</div>
@@ -68,25 +83,6 @@
 		<main>
 			<div id="colored_div">
 				<h2>Database engineering with PHP week 3</h2>
-			</div>
-			<div id="reservations">
-				<h2>1.1 Assignment 1: sessions</h2>
-				<blockquote>Rob's suggestion: make a form with one page for each question.</blockquote>
-				<p>Create a system where guests can make a reservation at a restaurant. The data must be
-				stored in sessions. This allows the user to navigate back and forth in the reservation and
-				adjust it if needed. If the user closes the browser, the reservation is deleted.</p>
-				<p>The system must consist of the following pages that can be navigated between:</p>
-				<ol>
-					<li>Specifying the number of guests</li>
-					<li>Specifying allergies (per guest). For example: with a reservation of, for example, four guests, four boxes must be placed to indicate allergies</li>
-					<li>Specifying the type of reservation: breakfast, lunch or dinner</li>
-					<li>Providing the contact details</li>
-					<li>A summary of the specified data</li>
-				</ol>
-			</div>
-			<div id="colored_div">
-				<h2>Solution</h2>
-				<p>Solution</p>
 			</div>
 			<div id="settings">
 				<h2>1.2 Assignment 2: temporary cookies</h2>
@@ -164,13 +160,6 @@
 					} else {
 						 echo $fs_name . " is set as " . $_COOKIE[$fs_name] . ".<br>";
 					}
-					
-					/* read https://www.php.net/manual/en/function.header
-					if(filter_input(INPUT_POST, "save-settings") {
-						header('Location: ../../')
-						exit;
-					}
-					*/
 				?>
 			</div>
 		</main>

@@ -6,7 +6,7 @@
 
 		// If item already exists in cart, update quantity
 		if (isset($_SESSION['SESSION'][$key])) {
-			$quantity += $_SESSION['SESSION'][$key]['qty'];
+			$quantity += $_SESSION['SESSION'][$key]['quantity'];
 			update_item($key, $quantity);
 			return;
 		}
@@ -17,7 +17,7 @@
 		$item = array(
 			'name'=> $products[$key]['name'],
 			'cost'=> $cost,
-			'qty' => $quantity,
+			'quantity' => $quantity,
 			'total'=> $total
 		);
 		$_SESSION['SESSION'][$key] = $item;
@@ -30,9 +30,9 @@
 			if ($quantity <= 0) {
 				unset($_SESSION['SESSION'][$key]);
 			} else {
-				$_SESSION['cart12'][$key]['qty'] = $quantity;
+				$_SESSION['cart12'][$key]['quantity'] = $quantity;
 				$total = $_SESSION['SESSION'][$key]['cost'] *
-					$SESSION['cart12'][$key]['qty'];
+					$SESSION['cart12'][$key]['quantity'];
 				$SESSION ['cart 12'][$key] ['total'] = $total;
 			}
 		}

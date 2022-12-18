@@ -7,7 +7,8 @@
 /*	These are the MySQL 5.6 code solutions  						          */
 /*								                                             */
 /******************************************************************************/
-
+CREATE DATABASE IF NOT EXISTS `morgan` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `morgan`;
 
 CREATE TABLE ITEM (
 		ItemID	            Int				    NOT NULL auto_increment,

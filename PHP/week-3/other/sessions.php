@@ -31,7 +31,7 @@
 
 	$id = session_id(); // For example, lljeflfoilg8u6qnui4f8b6el4
 
-	session_id('abcl23');
+	session_id('abc123');
 
 	$_SESSION = array(); // Clear session data from memory
 	session_destroy(); // Clean up the session ID

@@ -27,7 +27,7 @@
 				</select><br>
 
 				<label>Quantity:</label>
-				<select name="itemqty">
+				<select name="itemquantity">
 				<?php for($i = 1; $i <= 10; $i++) : ?>
 					<option value="<?php echo $i; ?>">
 						<?php echo $i; ?>

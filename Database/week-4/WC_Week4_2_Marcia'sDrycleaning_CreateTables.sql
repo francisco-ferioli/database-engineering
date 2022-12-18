@@ -9,6 +9,10 @@
 /*  	Thus, customerIDs are inserted manually 100, 105, 110, etc. 			*/		
 /********************************************************************************/
 
+CREATE DATABASE IF NOT EXISTS `marcia` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `marcia`;
+
+
 CREATE TABLE CUSTOMER(
 		CustomerID		Int				    NOT NULL auto_increment,
 		FirstName 		Char(25)	    NOT NULL,
@@ -17,8 +21,6 @@ CREATE TABLE CUSTOMER(
 		Email			    varchar(100)	    NULL,
 		CONSTRAINT		CustomerPK    PRIMARY KEY(CustomerID)
 		);
-
-
 
 CREATE TABLE INVOICE(
 		InvoiceNumber       Int				   NOT NULL auto_increment,
@@ -30,8 +32,6 @@ CREATE TABLE INVOICE(
 		CONSTRAINT  	Invoice_Cust_FK 	FOREIGN KEY(CustomerNumber)
 							REFERENCES CUSTOMER(CustomerID)
                  		);
-
-ALTER TABLE invoice AUTO_INCREMENT = 20150001; 
 
 CREATE TABLE INVOICE_ITEM(
 		InvoiceNumber   Int				    NOT NULL,
@@ -45,6 +45,10 @@ CREATE TABLE INVOICE_ITEM(
 								ON UPDATE CASCADE
 								ON DELETE CASCADE
 		    );
+
+ALTER TABLE INVOICE AUTO_INCREMENT = 20150001; 
+
+
 
 /********************************************************************************/
 

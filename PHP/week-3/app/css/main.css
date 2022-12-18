@@ -97,6 +97,10 @@ select {
 	grid-column: 2;
 }
 
+img {
+	width: 50%;
+}
+
 footer {
 	font-weight: bold;
 	text-align: center;
