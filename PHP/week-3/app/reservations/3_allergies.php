@@ -2,6 +2,16 @@
 	//Check if a form has been posted to the script
 	if(isset($_POST['submit_allergies'])){
 
+/*
+<?php
+	function generate_html($parameter)
+	{
+		echo "<form></form>";
+	}
+	generate_html('new_value');
+?>
+*/
+
 		//If true -> continue
 		$_SESSION['third'] = $_POST['submit_allergies'];
 		$_SESSION['eggs'] = $_POST['eggs'];
